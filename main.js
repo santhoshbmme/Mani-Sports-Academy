@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 5. Intersection Observer for Reveal Animations
-    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-text');
+    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-text, .animate-in');
     
     const revealOptions = {
         threshold: 0.15,
@@ -121,4 +121,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const heroText = document.querySelector('.hero-text-container');
         if (heroText) heroText.classList.add('active');
     }, 100);
+
+    // 6. Cinematic Promo Popup Logic
+    const promoPopup = document.getElementById('promo-popup');
+    const closePopupBtn = document.getElementById('close-popup');
+    const popupCta = document.getElementById('popup-cta');
+
+    if (promoPopup && closePopupBtn) {
+        // Show popup with a slight delay for cinematic effect
+        setTimeout(() => {
+            promoPopup.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is open
+        }, 1200);
+
+        // Close function
+        const closePopup = () => {
+            promoPopup.classList.remove('show');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        };
+
+        closePopupBtn.addEventListener('click', closePopup);
+
+        // Close on CTA click (links to section)
+        if (popupCta) {
+            popupCta.addEventListener('click', closePopup);
+        }
+
+        // Close on overlay click (if clicking exactly on the overlay)
+        promoPopup.addEventListener('click', (e) => {
+            if (e.target === promoPopup) {
+                closePopup();
+            }
+        });
+    }
 });

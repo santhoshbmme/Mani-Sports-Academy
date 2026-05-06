@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Mani Sports Academy | Dharapuram</title>
     <meta name="description" content="Train Like an Athlete. Live Like a Champion. Premium sports coaching and fitness training in Dharapuram.">
+    
+    <!-- Theme color for mobile browser chrome -->
+    <meta name="theme-color" content="#18181B" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mani Sports Academy" />
+    <meta property="og:description" content="Premium sports coaching and fitness training in Dharapuram." />
+    <meta property="og:image" content="hero_bg.jpg" />
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -39,8 +49,8 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-text-container reveal-text">
-                <h2 class="location-badge"><i class="fas fa-map-marker-alt"></i> Dharapuram</h2>
-                <h1 class="main-title">MANI SPORTS <br><span class="accent-glow">ACADEMY</span></h1>
+                <h2 class="location-badge animate-fade-in"><i class="fas fa-map-marker-alt"></i> Dharapuram</h2>
+                <h1 class="main-title animate-slide-up">MANI SPORTS <br><span class="accent-glow">ACADEMY</span></h1>
                 <p class="subtitle">Train Like an Athlete. Live Like a Champion.</p>
                 <div class="cta-group">
                     <a href="#pricing" class="btn btn-primary glow-btn">Join Now <i class="fas fa-arrow-right"></i></a>
@@ -251,6 +261,7 @@
                     <div class="social-links">
                         <a href="https://www.instagram.com/mani_sports_academy/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.youtube.com/@maniSportsAcademy" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:msa.dpm2024@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 
@@ -318,6 +329,60 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cinematic Popup Modal -->
+    <div id="promo-popup" class="popup-overlay">
+        <div class="popup-container">
+            <button id="close-popup" class="popup-close" aria-label="Close Popup">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="popup-bg-elements">
+                <div class="streak streak-1"></div>
+                <div class="streak streak-2"></div>
+                <div class="particle p-1"></div>
+                <div class="particle p-2"></div>
+                <div class="particle p-3"></div>
+                <div class="particle p-4"></div>
+                <div class="particle p-5"></div>
+                <div class="neon-gradient-glow"></div>
+            </div>
+
+            <div class="popup-content">
+                <div class="popup-header">
+                    <span class="limited-tag">Limited Time Offer</span>
+                    <h1 class="popup-title">🔥 SUMMER CAMP 🔥</h1>
+                </div>
+
+                <div class="popup-body">
+                    <ul class="activity-list">
+                        <li><i class="fas fa-running"></i> Athletics</li>
+                        <li><i class="fas fa-badminton"></i> Badminton</li>
+                        <li><i class="fas fa-table-tennis"></i> Table Tennis</li>
+                        <li><i class="fas fa-dumbbell"></i> Fitness</li>
+                        <li><i class="fas fa-weight"></i> Weight Loss Training</li>
+                    </ul>
+
+                    <div class="status-tag">
+                        <i class="fas fa-rocket"></i> Classes Going Now!
+                    </div>
+
+                    <div class="price-badge">
+                        <span class="badge-label">Offer Price</span>
+                        <span class="badge-amount">Rs.1000</span>
+                    </div>
+
+                    <div class="contact-box">
+                        <p class="contact-numbers"><i class="fas fa-phone-alt"></i> 9361733881 | 9629635351</p>
+                    </div>
+                </div>
+
+                <div class="popup-footer">
+                    <a href="#contact" id="popup-cta" class="btn btn-primary glow-btn full-width">JOIN NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
